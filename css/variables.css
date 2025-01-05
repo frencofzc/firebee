@@ -124,8 +124,8 @@
   --color-background: 255, 255, 255;
   --gradient-background: #ffffff;
   --color-foreground: 58, 58, 58;
-  --color-background-contrast: 23, 35, 81;
-  --color-shadow: 18, 18, 18;
+  --color-background-contrast:  245, 244, 237;
+  --color-shadow: 217, 217, 217;
   --color-button: 185, 100, 76;
   --color-button-text: 255, 255, 255;
   --color-secondary-button: 255, 255, 255;
@@ -134,7 +134,7 @@
   --color-rating: 253, 147, 1;
   --color-badge-foreground: 255, 255, 255;
   --color-badge-background: 185, 100, 76;
-  --color-badge-border: 255, 255, 255;
+  --color-badge-border: 217, 217, 217;
 }
 
 .color-scheme-2 {
@@ -224,7 +224,7 @@ body,
   --grid-mobile-horizontal-spacing: 4px;
 
   --buttons-radius: 40px;
-  --buttons-radius-outset: 0px;
+  --buttons-radius-outset: 40px;
   --buttons-border-width: 0px;
   --buttons-border-opacity: 100%;
   --buttons-shadow-opacity: 100%;

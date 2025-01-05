@@ -314,7 +314,7 @@ h5,
   font-weight: var(--font-body-weight);
   letter-spacing: calc(var(--font-body-scale) * 0.06rem);
   color: rgb(var(--color-foreground));
-  line-height: calc(1 + 0.3 / max(1, var(--font-body-scale)));
+  line-height: calc(1 + 0.5 / max(1, var(--font-body-scale)));
   word-break: break-word;
 }
 
@@ -1421,7 +1421,7 @@ deferred-media {
 
 .button {
   min-width: calc(12rem + var(--buttons-border-width) * 2);
-  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+  min-height: calc(5rem + var(--buttons-border-width) * 2);
 }
 
 .button {
@@ -1429,6 +1429,7 @@ deferred-media {
   justify-content: center;
   align-items: center;
   border: 0;
+  gap: 1rem;
   padding: 0 3rem;
   cursor: pointer;
   font: inherit;
@@ -1438,7 +1439,7 @@ deferred-media {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: rgba(var(--color-button), 1);
 }
 
 .button:before {
@@ -1547,4 +1548,10 @@ deferred-media {
   background: linear-gradient(90deg, rgb(var(--color-rating)) var(--percent), rgba(var(--color-foreground), .15) var(--percent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 980px) {
+  .button {
+    min-height: calc(6rem + var(--buttons-border-width) * 2);
+  }
 }
