@@ -11,6 +11,25 @@
   margin: 0 auto;
 }
 
+.gallery-badges--box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  max-width: 63rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 99;
+}
+
+.gallery-badges--box > * {
+  width: 7.4rem;
+}
+
+#main-carousel {
+  margin-top: -3rem;
+}
+
 #main-carousel .splide__slide:first-child {
   margin-right: 0.1rem;
 }
@@ -19,34 +38,20 @@
   padding-left: 0;
 }
 
-/* Price */
-.price {
-  font-size: 1.6rem;
-  letter-spacing: .1rem;
-  font-weight: 500;
-  line-height: calc(1 + .5 / var(--font-body-scale));
-  color: rgb(var(--color-foreground));
-}
-
-/* Shop pay */
-.shop-pay  {
-  display: inline;
-  vertical-align: middle;
-  line-height: 1.8;
-}
-
-.shop-pay > * {
-  margin-right: 0.6rem;
-}
-
-/* Text */
-
 @media screen and (min-width: 750px) {
   .product__column-sticky {
     display: block;
     position: sticky;
     top: 3rem;
     z-index: 2;
+  }
+
+  #main-carousel {
+    margin-top: -5rem;
+  }
+
+  .gallery-badges--box > * {
+    width: 11.2rem;
   }
 
   .product--thumbnail .thumbnail-list {
@@ -82,7 +87,7 @@
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 59%;
     width: calc(59% - var(--grid-desktop-horizontal-spacing) / 2);
-    padding-inline: 1.5rem;
+    padding-inline: 0;
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
@@ -116,7 +121,7 @@
   margin: 0 auto 2rem auto;
 }
 
-.main-product-gallery + .main-product-gallery {
+.main-product-gallery+.main-product-gallery {
   margin-bottom: 5rem;
 }
 
@@ -141,6 +146,271 @@
   .review-box {
     gap: 2.9rem;
   }
+}
+
+/* Price */
+.price {
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+  font-weight: 500;
+  line-height: calc(1 + .5 / var(--font-body-scale));
+  color: rgb(var(--color-foreground));
+}
+
+/* Shop pay */
+.shop-pay  {
+  display: inline;
+  vertical-align: middle;
+  line-height: 1.8;
+}
+
+.shop-pay > * {
+  margin-right: 0.6rem;
+}
+
+/* Subscription Widget */
+.subscription-label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: var(--bot-border-width) solid transparent;
+  color: var(--color-foreground);
+  background-color: rgb(var(--color-background-contrast));
+  transition: all 0.3s ease;
+  --dot-width: 1.7rem;
+  --bot-border-width: 0.2rem;
+}
+
+.subscription-label:has(input[type="radio"]:checked)  {
+  border: var(--bot-border-width) solid rgb(var(--color-button));
+}
+
+.subscription-input-box {
+  display: grid;
+  align-items: center;
+  grid-template-areas: "dot text price";
+  grid-template-columns: var(--dot-width) 1fr auto;
+  width: 100%;
+  gap: 1.4rem;
+}
+
+.subscription-input-box .subscription-input {
+  grid-area: dot;
+  height: var(--dot-width);
+  background-color: rgb(var(--color-button));
+  border-radius: 50%;
+  position: relative;
+}
+
+.subscription-input-box .input-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - var(--bot-border-width));
+  height: calc(100% - var(--bot-border-width));
+  display: block;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  border: 2px solid rgb(var(--color-background-contrast));
+  background-color: rgb(var(--color-background-contrast));
+}
+
+.subscription-label input[type="radio"]:checked + .input-dot {
+  background-color: transparent;
+}
+
+.subscription-input-box .h4 {
+  grid-area: text;
+}
+
+.subscription-input-box .subscription-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: price;
+  gap: 0.5rem;
+}
+
+.subscription-input-box .subscription-price .save--price {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.subscription-input-box .subscription-price .regular--price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(var(--color-button));
+}
+
+.subscription-label .check-mark-list {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.subscription-label .check-mark-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Buy Button */
+
+.product-form__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-form__quantity + .product-form__submit {
+  width: calc(100% - 10.6rem);
+  flex-grow: 1;
+}
+
+.quantity {
+  color: rgba(var(--color-foreground));
+  position: relative;
+  border: var(--inputs-border-width) solid rgb(var(--color-shadow));
+  width: calc(9.4rem / var(--font-body-scale) + var(--inputs-border-width)* 2);
+  display: flex;
+  border-radius: var(--inputs-radius);
+  min-height: calc(5rem - var(--buttons-border-width) * 2);
+}
+
+.quantity__input {
+  color: currentColor;
+  font-size: 1.6rem;
+  font-weight: 500;
+  opacity: .85;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+  padding: 0 .5rem;
+  width: 100%;
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="number"].quantity__input::-webkit-outer-spin-button,
+input[type="number"].quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"].quantity__input {
+  -moz-appearance: textfield;
+}
+
+.quantity__button {
+  width: calc(3rem / var(--font-body-scale));
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--color-foreground));
+  padding: 0;
+}
+
+.quantity__button svg {
+  width: 1rem;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 750px) {
+  .product-form__buttons {
+    margin-top: 2rem;
+  }
+  .quantity {
+    min-height: calc(6rem + var(--buttons-border-width) * 2);
+  }
+}
+
+/* Payments methods */
+
+.accepted-payment-cards {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.accepted-payment-cards li {
+  line-height: 1;
+}
+
+/* accordion */
+
+details.accordion {
+  border-top: 1px solid rgb(var(--color-badge-border));
+  border-bottom: 1px solid rgb(var(--color-badge-border));
+  margin-bottom: 0;
+}
+
+details.accordion + details.accordion {
+  margin-top: 0;
+}
+
+details.accordion + details.accordion:last-child {
+  border-top: none;
+}
+
+details.accordion summary {
+  cursor: pointer;
+  padding: 15px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  outline: none;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+details.accordion summary svg {
+  transition: transform 0.3s ease;
+  width: 1.2rem;
+}
+
+details.accordion summary::marker {
+  content: '';
+}
+
+details.accordion .content {
+  padding: 0 15px;
+  max-height: 0;
+  transition: max-height 0.5s ease-out, padding 0.3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+details[open].accordion summary svg {
+  transform: rotate(90deg);
+}
+
+details[open].accordion .content {
+  padding: 1.5rem;
+  max-height: 18rem;
 }
 
 /* Check List */
