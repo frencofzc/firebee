@@ -60,6 +60,9 @@
 }
 
 @media screen and (min-width: 980px) {
+  .featured-brands {
+    flex-direction: row;
+  }
   .featured-brands .featured-brand--details {
     margin-bottom: 0;
     max-width: var(--max-details-width);
