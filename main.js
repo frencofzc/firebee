@@ -41,7 +41,7 @@
 var main = new Splide( '#main-carousel', {
   type       : 'slide',
   pagination : false,
-  arrows     : true,
+  arrows     : false,
   cover      : true,
 } );
 

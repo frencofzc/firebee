@@ -11,6 +11,10 @@
   margin: 0 auto;
 }
 
+#main-carousel .splide__slide:first-child {
+  margin-right: 0.1rem;
+}
+
 .product__media-wrapper {
   padding-left: 0;
 }
@@ -110,6 +114,10 @@
   max-width: 63rem;
   width: 100%;
   margin: 0 auto 2rem auto;
+}
+
+.main-product-gallery + .main-product-gallery {
+  margin-bottom: 5rem;
 }
 
 .thumbnail-list {
