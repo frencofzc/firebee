@@ -1,0 +1,281 @@
+/* Fonts */
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("../fonts/metropolis/Metropolis-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display/PlayfairDisplay-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Color  Schemes */
+.color-scheme-1 {
+  --color-background: 255, 255, 255;
+  --gradient-background: #ffffff;
+  --color-foreground: 58, 58, 58;
+  --color-background-contrast: 23, 35, 81;
+  --color-shadow: 18, 18, 18;
+  --color-button: 185, 100, 76;
+  --color-button-text: 255, 255, 255;
+  --color-secondary-button: 255, 255, 255;
+  --color-secondary-button-text: 58, 58, 58;
+  --color-link: 58, 58, 58;
+  --color-rating: 253, 147, 1;
+  --color-badge-foreground: 255, 255, 255;
+  --color-badge-background: 185, 100, 76;
+  --color-badge-border: 255, 255, 255;
+}
+
+.color-scheme-2 {
+  --color-background: 245, 244, 237;
+  --gradient-background: #F5F4ED;
+  --color-foreground: 58, 58, 58;
+  --color-background-contrast: 23, 35, 81;
+  --color-shadow: 18, 18, 18;
+  --color-button: 185, 100, 76;
+  --color-button-text: 255, 255, 255;
+  --color-secondary-button: 255, 255, 255;
+  --color-secondary-button-text: 58, 58, 58;
+  --color-link: var(--color-foreground);
+  --color-badge-foreground: 255, 255, 255;
+  --color-badge-background: 185, 100, 76;
+  --color-badge-border: 255, 255, 255;
+}
+
+.color-scheme-3 {
+  --color-background: 30, 63, 64;
+  --gradient-background: #1E3F40;
+  --color-foreground: 255, 255, 255;
+  --color-background-contrast: 23, 35, 81;
+  --color-shadow: 18, 18, 18;
+  --color-button: 185, 100, 76;
+  --color-button-text: 255, 255, 255;
+  --color-secondary-button: 255, 255, 255;
+  --color-secondary-button-text: 58, 58, 58;
+  --color-link: var(--color-foreground);
+  --color-badge-foreground: 255, 255, 255;
+  --color-badge-background: 185, 100, 76;
+  --color-badge-border: 255, 255, 255;
+}
+
+.color-scheme-4 {
+  --color-background: 71, 25, 47;
+  --gradient-background: #47192F;
+  --color-foreground: 255, 255, 255;
+  --color-background-contrast: 23, 35, 81;
+  --color-shadow: 18, 18, 18;
+  --color-button: 185, 100, 76;
+  --color-button-text: 255, 255, 255;
+  --color-secondary-button: 255, 255, 255;
+  --color-secondary-button-text: 58, 58, 58;
+  --color-link: 58, 58, 58;
+  --color-badge-foreground: 255, 255, 255;
+  --color-badge-background: 185, 100, 76;
+  --color-badge-border: 255, 255, 255;
+}
+
+body,
+.color-scheme-1,
+.color-scheme-2,
+.color-scheme-3,
+.color-scheme-4 {
+  color: rgba(var(--color-foreground), 0.75);
+  background-color: rgb(var(--color-background));
+}
+
+:root {
+  --font-body-family: "Metropolis", sans-serif;
+  --font-body-style: normal;
+  --font-body-weight: 300;
+  --font-body-weight-bold: 600;
+
+  --font-heading-family: "Playfair Display", sans-serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 500;
+
+  --font-body-scale: 1.0;
+  --font-heading-scale: 1.0;
+
+  --page-width: 138rem;
+  --page-width-margin: 0rem;
+
+  --section-padding-top: 1rem;
+  --section-padding-bottom: 1rem;
+
+  --badge-corner-radius: 1rem;
+
+  --spacing-sections-desktop: 0px;
+  --spacing-sections-mobile: 0px;
+
+  --grid-desktop-vertical-spacing: 8px;
+  --grid-desktop-horizontal-spacing: 8px;
+  --grid-mobile-vertical-spacing: 4px;
+  --grid-mobile-horizontal-spacing: 4px;
+
+  --buttons-radius: 40px;
+  --buttons-radius-outset: 0px;
+  --buttons-border-width: 0px;
+  --buttons-border-opacity: 100%;
+  --buttons-shadow-opacity: 100%;
+  --buttons-shadow-visible: 1;
+  --buttons-shadow-horizontal-offset: 0px;
+  --buttons-shadow-vertical-offset: 0px;
+  --buttons-shadow-blur-radius: 0px;
+  --buttons-border-offset: 0px;
+
+  --inputs-radius: 40px;
+  --inputs-border-width: 1px;
+  --inputs-border-opacity: 100%;
+  --inputs-shadow-opacity: 100%;
+  --inputs-shadow-horizontal-offset: 0px;
+  --inputs-margin-offset: 0px;
+  --inputs-shadow-vertical-offset: 0px;
+  --inputs-shadow-blur-radius: 0px;
+  --inputs-radius-outset: 0px;
+
+  --image-padding: 56.50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(var(--font-body-scale) * 62.5%);
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-size: 1.5rem;
+  /* letter-spacing: 0.06rem; */
+  letter-spacing: normal;
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+}
+
+@media screen and (min-width: 750px) {
+  body {
+    font-size: 1.6rem;
+  }
+}

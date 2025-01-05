@@ -1,0 +1,72 @@
+.featured-brands {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  --brands-gap: 5rem;
+  --max-details-width: 25rem;
+  --max-brands-width: calc(100% - var(--max-details-width));
+}
+
+.featured-brands > * {
+  width: 100%;
+}
+
+.featured-brands .featured-brand--details {
+  text-align: center;
+  margin-bottom: 2rem;
+  /* max-width: var(--max-details-width);
+  width: calc(var(--max-details-width) - var(--grid-mobile-horizontal-spacing) / 2); */
+}
+
+.featured-brands .featured-brand--brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  /* max-width: var(--max-brands-width);
+  width: calc(var(--max-brands-width) - var(--grid-mobile-horizontal-spacing) / 2); */
+}
+
+.featured-brand--brands .featured-brands--cover {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--brands-gap);
+  padding-left: calc(var(--brands-gap) / 2);
+  padding-right: calc(var(--brands-gap) / 2);
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: var(--font-body-family);
+  line-height: 2.2rem;
+  animation-name: marquee-left;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 14s;
+  animation-play-state: running;
+  width: max-content;
+}
+
+.featured-brands--cover .f-brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 750px) {
+  /*  */
+}
+
+@media screen and (min-width: 980px) {
+  .featured-brands .featured-brand--details {
+    margin-bottom: 0;
+    max-width: var(--max-details-width);
+    width: calc(var(--max-details-width) - var(--grid-mobile-horizontal-spacing) / 2);
+  }
+  .featured-brands .featured-brand--brands {
+    max-width: var(--max-brands-width);
+    width: calc(var(--max-brands-width) - var(--grid-mobile-horizontal-spacing) / 2);
+  }
+}
