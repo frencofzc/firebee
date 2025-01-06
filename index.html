@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/marquee-slider.css">
   <link rel="stylesheet" href="./css/main-product.css ">
   <link rel="stylesheet" href="./css/featured-brands.css ">
+  <link rel="stylesheet" href="./css/image-with-text.css">
   <link rel="stylesheet" href="./src/splide/splide.min.css">
 </head>
 <body>
@@ -543,7 +544,7 @@
                   </li>
                 </ul> -->
                 
-                <div class="review-box">
+                <div class="review-box small-hide">
                   <div class="review-img">
                     <div class="media media--square">
                       <img src="./src/img/review-avatar.png" width="76" height="76" loading="lazy" alt="">
@@ -804,28 +805,47 @@
                     </li>
                   </ul>
                 </div>
-                <details class="accordion">
-                  <summary>
-                    <div class="label">Directions</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor"></path>
-                    </svg>
-                  </summary>
-                  <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore, fugiat corrupti eos eveniet asperiores fuga at? Atque sint dolorem, accusantium velit veritatis illum deleniti molestias est consequuntur odio fugit aliquid id tempora perferendis tenetur placeat repellendus esse accusamus totam. Aut asperiores, qui vitae dolore impedit deserunt alias praesentium et quos quibusdam! Est optio, alias ab debitis nostrum perspiciatis consectetur! Delectus impedit ratione alias laboriosam porro, tempora deleniti! Cumque totam deleniti laborum, architecto praesentium aliquam iure magnam quas ipsa nobis quibusdam quo voluptates qui animi minus possimus unde nostrum soluta necessitatibus alias maxime illum id reiciendis? Rerum id minima delectus perferendis libero nobis incidunt esse, sint tempore animi omnis molestiae deserunt, vero qui a eos facere saepe. Natus, magnam libero?</p>
+                <div class="review-box medium-hide large-up-hide">
+                  <div class="review-img">
+                    <div class="media media--square">
+                      <img src="./src/img/review-avatar.png" width="76" height="76" loading="lazy" alt="">
+                    </div>
                   </div>
-                </details>
-                <details class="accordion">
-                  <summary>
-                    <div class="label">Ingredients</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-plus" fill="none" viewBox="0 0 10 10">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor"></path>
-                    </svg>
-                  </summary>
-                  <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore, fugiat corrupti eos eveniet asperiores fuga at? Atque sint dolorem, accusantium velit veritatis illum deleniti molestias est consequuntur odio fugit aliquid id tempora perferendis tenetur placeat repellendus esse accusamus totam. Aut asperiores, qui vitae dolore impedit deserunt alias praesentium et quos quibusdam! Est optio, alias ab debitis nostrum perspiciatis consectetur! Delectus impedit ratione alias laboriosam porro, tempora deleniti! Cumque totam deleniti laborum, architecto praesentium aliquam iure magnam quas ipsa nobis quibusdam quo voluptates qui animi minus possimus unde nostrum soluta necessitatibus alias maxime illum id reiciendis? Rerum id minima delectus perferendis libero nobis incidunt esse, sint tempore animi omnis molestiae deserunt, vero qui a eos facere saepe. Natus, magnam libero?</p>
+                  <div class="review-text">
+                    <div class="typeset2">“I am so excited for this brand and have been taking my Brain Health drink for just over a
+                      month with fantastic results. Super happy! Thanks! Will buy again soon!”</div>
+                    <div class="author-box">
+                      <span class="review-author">Heather </span>
+                      <span class="rating-star" style="--rating: 5;--rating-max: 5.0;--rating-decimal: 0.5;"></span>
+                    </div>
                   </div>
-                </details>
+                </div>
+                <accordion-tab class="accordion">
+                  <details>
+                    <summary>
+                      <span class="summary__title">
+                        <span class="accordion__title weight-500">Directions</span>
+                      </span>
+                      <div class="icon icon-plus-alt"></div>
+                    </summary>
+                    <div class="content accordion__content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore, fugiat corrupti eos eveniet asperiores fuga at? Atque sint dolorem, accusantium velit veritatis illum deleniti molestias est consequuntur odio fugit aliquid id tempora perferendis tenetur placeat repellendus esse accusamus totam. Aut asperiores, qui vitae dolore impedit deserunt alias praesentium et quos quibusdam! Est optio, alias ab debitis nostrum perspiciatis consectetur! Delectus impedit ratione alias laboriosam porro, tempora deleniti! Cumque totam deleniti laborum, architecto praesentium aliquam iure magnam quas ipsa nobis quibusdam quo voluptates qui animi minus possimus unde nostrum soluta necessitatibus alias maxime illum id reiciendis? Rerum id minima delectus perferendis libero nobis incidunt esse, sint tempore animi omnis molestiae deserunt, vero qui a eos facere saepe. Natus, magnam libero?</p>
+                    </div>
+                  </details>
+                </accordion-tab>
+                <accordion-tab class="accordion">
+                  <details>
+                    <summary>
+                      <span class="summary__title">
+                        <span class="accordion__title weight-500">Ingredients</span>
+                      </span>
+                      <div class="icon icon-plus-alt"></div>
+                    </summary>
+                    <div class="content accordion__content">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium tempore, fugiat corrupti eos eveniet asperiores fuga at? Atque sint dolorem, accusantium velit veritatis illum deleniti molestias est consequuntur odio fugit aliquid id tempora perferendis tenetur placeat repellendus esse accusamus totam. Aut asperiores, qui vitae dolore impedit deserunt alias praesentium et quos quibusdam! Est optio, alias ab debitis nostrum perspiciatis consectetur! Delectus impedit ratione alias laboriosam porro, tempora deleniti! Cumque totam deleniti laborum, architecto praesentium aliquam iure magnam quas ipsa nobis quibusdam quo voluptates qui animi minus possimus unde nostrum soluta necessitatibus alias maxime illum id reiciendis? Rerum id minima delectus perferendis libero nobis incidunt esse, sint tempore animi omnis molestiae deserunt, vero qui a eos facere saepe. Natus, magnam libero?</p>
+                    </div>
+                  </details>
+                </accordion-tab>
               </product-info>
             </div>
           </div>
@@ -963,16 +983,442 @@
       </div>
     </section>
 
-    <hr>
+    <!-- Image with Text section of Daily support long term brain health -->
+    <section id="image-with-text">
+      <style>
+        #image-with-text {
+          --section-padding-top: 0rem;
+          --section-padding-bottom: 5.6rem;
+        }
+        @media screen and (max-width: 749px) {
+          #image-with-text .grid__item .media-wrapper {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+          }
+        }
+        @media screen and (min-width: 750px) {
+          #image-with-text {
+            --section-padding-top: 8.3rem;
+            --section-padding-bottom: 8rem;
+          }
+        }
+      </style>
+      <div class="section-padding gradient color-scheme-1">
+        <div class="image-with-text page-width">
+          <div class="image-with-text__grid grid grid--1-col grid--2-col-tablet image-with-text__grid--reverse">
+            <div class="grid__item">
+              <!-- Media -->
+              <div class="media-wrapper" style="--image-padding: 105.85%">
+                <div class="media media--custom">
+                  <img src="./src/img/daily-support-for-long-term-brain-health-2x.jpg" width="auto" height="auto" is="lazy" loading="lazy" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <!-- Contents -->
+              <div class="image-with-text__content left middle" style="padding-top: 0;">
+                <h2 class="h0">
+                  Daily support for long term brain health
+                </h2>
+                <div class="typeset3">
+                  Formulated to enhance focus, uplift mood, and support overall wellness—helping your brain thrive every day.
+                </div>
+                <div class="accordion-box">
+                  <div class="tab-img-cover">
+                    <img src="./src/img/01-tab-img.png" alt="" class="tab-img">
+                  </div>
+                  <accordion-tab class="accordion">
+                    <details open>
+                      <summary>
+                        <span class="summary__title">
+                          <span class="accordion__title">Enhances Focus & Clarity</span>
+                        </span>
+                        <div class="icon icon-plus-alt"></div>
+                      </summary>
+                      <div class="content accordion__content">
+                        <p>Enhances your focus and concentration with Acetyl-L-carnitine and curcumin. Boost brain energy by up to 9% with MCT oil.</p>
+                      </div>
+                    </details>
+                  </accordion-tab>
+                </div>
+                <div class="accordion-box">
+                  <div class="tab-img-cover">
+                    <img src="./src/img/02-tab-img.png" alt="" class="tab-img">
+                  </div>
+                  <accordion-tab class="accordion">
+                    <details>
+                      <summary>
+                        <span class="summary__title">
+                          <span class="accordion__title">Mood & Energy</span>
+                        </span>
+                        <div class="icon icon-plus-alt"></div>
+                      </summary>
+                      <div class="content accordion__content">
+                        <p>Enhances your focus and concentration with Acetyl-L-carnitine and curcumin. Boost brain energy by up to 9% with MCT oil.</p>
+                      </div>
+                    </details>
+                  </accordion-tab>
+                </div>
+                <div class="accordion-box">
+                  <div class="tab-img-cover">
+                    <img src="./src/img/03-tab-img.png" alt="" class="tab-img">
+                  </div>
+                  <accordion-tab class="accordion">
+                    <details>
+                      <summary>
+                        <span class="summary__title">
+                          <span class="accordion__title">Brain Health</span>
+                        </span>
+                        <div class="icon icon-plus-alt"></div>
+                      </summary>
+                      <div class="content accordion__content">
+                        <p>Enhances your focus and concentration with Acetyl-L-carnitine and curcumin. Boost brain energy by up to 9% with MCT oil.</p>
+                      </div>
+                    </details>
+                  </accordion-tab>
+                </div>
+                <div class="accordion-box">
+                  <div class="tab-img-cover">
+                    <img src="./src/img/04-tab-img.png" alt="" class="tab-img">
+                  </div>
+                  <accordion-tab class="accordion">
+                    <details>
+                      <summary>
+                        <span class="summary__title">
+                          <span class="accordion__title">Beauty & Wellness</span>
+                        </span>
+                        <div class="icon icon-plus-alt"></div>
+                      </summary>
+                      <div class="content accordion__content">
+                        <p>Enhances your focus and concentration with Acetyl-L-carnitine and curcumin. Boost brain energy by up to 9% with MCT oil.</p>
+                      </div>
+                    </details>
+                  </accordion-tab>
+                </div>
+                <div class="accordion-box">
+                  <div class="tab-img-cover">
+                    <img src="./src/img/05-tab-img.png" alt="" class="tab-img">
+                  </div>
+                  <accordion-tab class="accordion">
+                    <details>
+                      <summary>
+                        <span class="summary__title">
+                          <span class="accordion__title">Overall Wellness</span>
+                        </span>
+                        <div class="icon icon-plus-alt"></div>
+                      </summary>
+                      <div class="content accordion__content">
+                        <p>Enhances your focus and concentration with Acetyl-L-carnitine and curcumin. Boost brain energy by up to 9% with MCT oil.</p>
+                      </div>
+                    </details>
+                  </accordion-tab>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Rich text -->
-    <section id="rich-text" style="--section-padding-top: 7.2rem;--section-padding-bottom: 3.8rem;">
+    <section id="rich-text">
+      <style>
+        #rich-text {
+          --section-padding-top: 3.8rem;
+          --section-padding-bottom: 2rem;
+        }
+
+        @media screen and (min-width: 750px) {
+          #rich-text {
+            --section-padding-top: 7.2rem;
+            --section-padding-bottom: 3.8rem;
+          }
+        }
+      </style>
       <div class="section-padding gradient color-scheme-2">
         <div class="page-width">
           <div class="rich-text center">
-            <div class="title-wrapper">
+            <div class="title-wrapper" style="max-width: 62.3rem;margin: 0 auto 2rem auto;--color-foreground: 30, 63, 64;">
               <h2 class="h0">Empowering women’s minds, one step at a time</h2>
             </div>
-            <div class="typeset3">We’re here to prioritize your brain health, ensuring you feel supported, focused, and ready to take on each day.</div>
+            <div class="typeset3" style="max-width: 50.6rem;margin: 0 auto;">We’re here to prioritize your brain health, ensuring you feel supported, focused, and ready to take on each day.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image with Text section of ladies did you know? -->
+    <section id="image-with-text-1" style="--section-padding-top: 1.2rem;--section-padding-bottom: 2.5rem;">
+      <style>
+        #image-with-text-1 {
+          --section-padding-top: 0rem;
+          --section-padding-bottom: 2.7rem;
+        }
+
+        @media screen and (max-width: 749px) {
+          #image-with-text-1 .grid__item .media-wrapper {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+          }
+        }
+      
+        @media screen and (min-width: 750px) {
+          #image-with-text-1 {
+            --section-padding-top: 1.2rem;
+            --section-padding-bottom: 2.5rem;
+          }
+        }
+      </style>
+      <div class="section-padding gradient color-scheme-2">
+        <div class="image-with-text page-width" style="--grid-desktop-horizontal-spacing: 100px;">
+          <div class="image-with-text__grid grid grid--1-col grid--2-col-tablet image-with-text__grid--reverse">
+            <div class="grid__item">
+              <!-- Media -->
+              <div class="media-wrapper" style="--image-padding: 65.68%">
+                <div class="media media--custom">
+                  <img src="./src/img/ladies-did-you-know-by-35-a-womans-brain-is-already-in-decline-2x.jpg" width="auto" height="auto" is="lazy" loading="lazy" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <!-- Contents -->
+              <div class="image-with-text__content middle" style="padding-inline-end: 0;  ">
+                <h2 class="h1 hxl font-body weight-300 line-120 ">
+                  Ladies, did you know by 35 a woman’s brain is already in decline?
+                </h2>
+                <div class="typeset2">
+                  According to studies, while women may reach their cognitive peak around the age of 35, this is also when the brain
+                  starts to lose volume due to natural aging processes, including cell death and reduced brain size. This decline can
+                  affect memory and focus, with short-term memory and other cognitive functions starting to diminish​​ (Stanford Medicine
+                  Magazine)​(HealthyWomen)​​
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Image with Text section of ladies did you know? -->
+    <section id="image-with-text-2" style="--section-padding-top: 2.5rem;--section-padding-bottom: 2.5rem;">
+      <style>
+        #image-with-text-2 {
+          --section-padding-top: 0rem;
+          --section-padding-bottom: 5.6rem;
+        }
+
+        @media screen and (max-width: 749px) {
+          #image-with-text-2 .grid__item .media-wrapper {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+          }
+        }
+      
+        @media screen and (min-width: 750px) {
+          #image-with-text-2 {
+            --section-padding-top: 2.5rem;
+            --section-padding-bottom: 2.5rem;
+          }
+        }
+      </style>
+      <div class="section-padding gradient color-scheme-2">
+        <div class="image-with-text page-width" style="--grid-desktop-horizontal-spacing: 100px;">
+          <div class="image-with-text__grid grid grid--1-col grid--2-col-tablet">
+            <div class="grid__item">
+              <!-- Media -->
+              <div class="media-wrapper" style="--image-padding: 65.68%">
+                <div class="media media--custom">
+                  <img src="./src/img/created-by-women-who-care-2x.jpg" width="auto" height="auto" is="lazy" loading="lazy" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <!-- Contents -->
+              <div class="image-with-text__content middle" style="padding-inline-start: 0;">
+                <h2 class="h1 hxl font-body weight-300 line-120 ">
+                  Created by Women Who Care
+                </h2>
+                <div class="typeset2">
+                  Founded by Emma Heming Willis and Helen Christoni, Make Time Wellness is a testament to their dedication to women's
+                  health. Emma and Helen, both driven by personal experiences, realized the urgent need for brain health products tailored
+                  for women. Their combined passion and expertise have resulted in a line of wellness products that support women in
+                  making time for themselves, ensuring both mental and physical well-being. Together, they are on a mission to prioritize
+                  women's brain health globally
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Image with Text section of ladies did you know? -->
+    <section id="image-with-text-3">
+      <style>
+        #image-with-text-3 {
+          --section-padding-top: 0rem;
+          --section-padding-bottom: 4rem;
+        }
+
+        @media screen and (max-width: 749px) {
+          #image-with-text-3 .grid__item .media-wrapper {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+          }
+        }
+
+        @media screen and (min-width: 750px) {
+          #image-with-text-3 {
+            --section-padding-top: 2.5rem;
+            --section-padding-bottom: 7rem;
+          }
+        }
+      </style>
+      <div class="section-padding gradient color-scheme-2">
+        <div class="image-with-text page-width" style="--grid-desktop-horizontal-spacing: 100px;">
+          <div class="image-with-text__grid grid grid--1-col grid--2-col-tablet image-with-text__grid--reverse">
+            <div class="grid__item">
+              <!-- Media -->
+              <div class="media-wrapper" style="--image-padding: 65.68%">
+                <div class="media media--custom">
+                  <img src="./src/img/expertly-formulated-by-women-for-women-needs-2x.jpg" width="auto" height="auto" is="lazy" loading="lazy" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="grid__item">
+              <!-- Contents -->
+              <div class="image-with-text__content middle" style="padding-inline-end: 0;  ">
+                <h2 class="h1 hxl font-body weight-300 line-120 ">
+                  Expertly Formulated by Women, for Women's Needs
+                </h2>
+                <div class="typeset2">
+                  Our supplement is crafted with a woman’s unique health needs in mind, formulated by women who understand. It features
+                  curcumin for mood and brain health, MCT oil for brain energy, acetyl-L-carnitine for cognitive function, and omegas for
+                  brain support. This comprehensive approach ensures that you are supported not just in brain performance, but also in
+                  overall well-being and beauty.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="image-with-faqs">
+      <style>
+        #image-with-faqs {
+          --section-padding-top: 3rem;
+          --section-padding-bottom: 3rem;
+        }
+        #image-with-faqs .accordion__title {
+          font-family: var(--font-heading-family);
+          font-weight: 500;
+          font-size: 2.2rem;  
+          color: rgb(var(--color-foreground));
+        }
+        #image-with-faqs details.accordion {
+          border-width: 0.2rem;
+        }
+        #image-with-faqs .accordion summary {
+          padding: 1.7rem 1.5rem;
+        }
+        @media screen and (min-width: 750px) {
+          #image-with-faqs {
+            --section-padding-top: 18rem;
+            --section-padding-bottom: 8.6rem;
+          }
+          #image-with-faqs .section-padding {
+            background-image: url("./src/img/make-time-wellness-2023-2x.jpg");
+            background-position: top right;
+            background-size: contain;
+            /* background-attachment: scroll; */
+            background-repeat: no-repeat;
+          }
+          #image-with-faqs .title-wrapper {
+            margin-bottom: 4rem;
+          }
+          .image-with-faqs--cover {
+            max-width: 78rem;
+          }
+        }
+      </style>
+      <div class="section-padding gradient color-scheme-1" style="--color-badge-border: 63, 54, 49;">
+        <div class="page-width">
+          <div class="image-with-faqs">
+            <div class="image-with-faqs--cover">
+              <div class="title-wrapper center" style="--color-foreground: 30, 63, 64;">
+                <h2 class="h0">Frequently asked questions</h2>
+              </div>
+              <accordion-tab class="accordion">
+                <details>
+                  <summary open>
+                    <span class="summary__title">
+                      <span class="accordion__title">Is Firebee Safe?</span>
+                    </span>
+                    <div class="icon icon-plus-alt"></div>
+                  </summary>
+                  <div class="content accordion__content">
+                    <p>Yes, Firebee is safe. Firebee meets the safety standards set by ICNIRP (International Commission on Non-Ionizing
+                    Radiation Protection). Firebee is 3000x less powerful than your average smartphone. Firebee uses an ultra-low signal
+                    that is completely safe for home use. The technology behind Firebee has been rigorously safety tested and has over
+                    300,000 hours tested by users for efficacy and safety.</p>
+                  </div>
+                </details>
+              </accordion-tab>
+              <accordion-tab class="accordion">
+                <details>
+                  <summary>
+                    <span class="summary__title">
+                      <span class="accordion__title">How Does Firebee work?</span>
+                    </span>
+                    <div class="icon icon-plus-alt"></div>
+                  </summary>
+                  <div class="content accordion__content">
+                    <p>Firebee uses safe ultra-low energy magnetic signals to gently nudge you into a different mental state.</p>
+                    <p>Every Firebee signal is made by studying real world magnetic signatures. Did you know caffeine has a unique one of a kind magnetic signature? It’s a relatively unknown fact that every molecule on earth actually has a unique magnetic signature.</p>
+                    <p>Firebee using patented technology is able to take a magnetic signature and play it back through the Firebee headband. When you use the alert signal with Firebee you are actually playing back the magnetic signature of caffeine which our bodies already recognize.</p>
+                    <p>Within minutes of feeling the ultra-low magnetic signal of caffeine our body begins to feel more alert and awake.</p>
+                    <p>Firebee signal is 3000 times less powerful than a smartphone and completely safe to use.</p>
+                  </div>
+                </details>
+              </accordion-tab>
+              <accordion-tab class="accordion">
+                <details>
+                  <summary>
+                    <span class="summary__title">
+                      <span class="accordion__title">Will Firebee Fit on My Head?</span>
+                    </span>
+                    <div class="icon icon-plus-alt"></div>
+                  </summary>
+                  <div class="content accordion__content">
+                    <p>Firebee has a fully adjustable headband you can adjust to fit comfortably and snug on your head.</p>
+                  </div>
+                </details>
+              </accordion-tab>
+              <accordion-tab class="accordion">
+                <details>
+                  <summary>
+                    <span class="summary__title">
+                      <span class="accordion__title">What If I want the signal to stop?</span>
+                    </span>
+                    <div class="icon icon-plus-alt"></div>
+                  </summary>
+                  <div class="content accordion__content">
+                    <p>Firebee is designed to be used on command. If you wish to turn off a signal, the effects wear off within minutes.</p>
+                  </div>
+                </details>
+              </accordion-tab>
+              <accordion-tab class="accordion">
+                <details>
+                  <summary>
+                    <span class="summary__title">
+                      <span class="accordion__title">How do you charge Firebee?</span>
+                    </span>
+                    <div class="icon icon-plus-alt"></div>
+                  </summary>
+                  <div class="content accordion__content">
+                    <p>Firebee comes with a charging dock and a charging cable. Just set up the charging dock on a nightstand and plug it in.</p>
+                  </div>
+                </details>
+              </accordion-tab>
+            </div>
           </div>
         </div>
       </div>
