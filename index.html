@@ -6,6 +6,7 @@
   <title>Firebee | A signal for every situation</title>
   <link rel="shortcut icon" href="favicon-rounded.svg" type="image/svg">
   <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./src/splide/splide.min.css">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="./css/announcement-bar.css">
   <link rel="stylesheet" href="./css/marquee-slider.css">
@@ -13,10 +14,14 @@
   <link rel="stylesheet" href="./css/featured-brands.css ">
   <link rel="stylesheet" href="./css/image-with-text.css">
   <link rel="stylesheet" href="./css/newsletter.css">
-  <link rel="stylesheet" href="./src/splide/splide.min.css">
 </head>
 <body>
-  <announcement-bar>
+  <announcement-bar id="announcement-bar">
+    <style>
+      #announcement-bar {
+        /* --section-padding-top: ; */
+      }
+    </style>
     <div class="section-padding gradient color-scheme-3">
       <div class="page-width">
         <div class="announcement-bar">
@@ -28,13 +33,27 @@
     </div>
   </announcement-bar>
 
-  <sticky-header>
-    <header class="section-padding gradient color-scheme-1" style="--section-padding-top: 2.75rem;--section-padding-bottom: 2.75rem;">
+  <sticky-header id="main-header">
+    <header class="section-padding gradient color-scheme-1">
+      <style>
+        #main-header {
+          --section-padding-top: 1.2rem;
+          --section-padding-bottom: 1.2rem;
+        }
+        @media screen and (min-width: 750px) {
+          #main-header {
+            --section-padding-top: 2.75rem;
+            --section-padding-bottom: 2.75rem;
+          }
+        }
+      </style>
       <div class="main-header page-width">
         <header-drawer>
           <menu-nav class="header__icon header__icon--menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon icon-menu" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            <svg width="33" height="22" class="icon icon-menu" viewBox="0 0 33 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H32" stroke="#3A3A3A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M1 11H27" stroke="#3A3A3A" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M1 21H19" stroke="#3A3A3A" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </menu-nav>
         </header-drawer>
@@ -57,19 +76,20 @@
           </nav>
         </div>
         <div class="header__icons">
-          <search-icon class="header__icon header__icon--search">
+          <search-icon class="header__icon header__icon--search small-hide">
             <svg width="24" height="24" viewBox="0 0 24 24" class="icon icon-search" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M21.0004 20.9999L16.6504 16.6499" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </search-icon>
-          <a href="#" class="header__icon header__icon--account">
+          <a href="#" class="header__icon header__icon--account small-hide">
             <svg width="24" height="24" viewBox="0 0 24 24" class="icon icon-account" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
           <a href="#" class="header__icon header__icon--cart">
+            <div class="cart-indication"></div>
             <svg width="24" height="24" viewBox="0 0 24 24" class="icon icon-cart" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#3A3A3A" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M3 6H21" stroke="#3A3A3A" stroke-linecap="round" stroke-linejoin="round"/>
@@ -405,7 +425,19 @@
     </section>
 
     <!-- Main Product -->
-    <section id="main-product" style="--section-padding-top: 4rem;--section-padding-bottom: 4rem;">
+    <section id="main-product">
+      <style>
+        #main-product {
+          --section-padding-top:  1.6rem;
+          --section-padding-bottom: 2.5rem;
+        }
+        @media screen and (min-width: 750px) {
+          #main-product {
+            --section-padding-top:  7.1rem;
+            --section-padding-bottom: 8.1rem;
+          }
+        }
+      </style>
       <div class="section-padding gradient color-scheme-1">
         <div class="page-width">
           <div class="product product--large grid grid--1-col grid--2-col-tablet">
@@ -1002,6 +1034,9 @@
             --section-padding-top: 8.3rem;
             --section-padding-bottom: 8rem;
           }
+          #image-with-text .image-with-text__content {
+            padding-top: 0;
+          }
         }
       </style>
       <div class="section-padding gradient color-scheme-1">
@@ -1017,7 +1052,7 @@
             </div>
             <div class="grid__item">
               <!-- Contents -->
-              <div class="image-with-text__content left middle" style="padding-top: 0;">
+              <div class="image-with-text__content left middle">
                 <h2 class="h0">
                   Daily support for long term brain health
                 </h2>
@@ -1199,6 +1234,7 @@
         </div>
       </div>
     </section>
+
     <!-- Image with Text 2 -->
     <section id="image-with-text-2" style="--section-padding-top: 2.5rem;--section-padding-bottom: 2.5rem;">
       <style>
@@ -1213,11 +1249,14 @@
             margin-right: -1.5rem;
           }
         }
-      
+
         @media screen and (min-width: 750px) {
           #image-with-text-2 {
             --section-padding-top: 2.5rem;
             --section-padding-bottom: 2.5rem;
+          }
+          #image-with-text-2 h2 br {
+            display: none;
           }
         }
       </style>
@@ -1236,7 +1275,7 @@
               <!-- Contents -->
               <div class="image-with-text__content middle" style="padding-inline-start: 0;">
                 <h2 class="h1 hxl font-body weight-300 line-120 ">
-                  Created by Women Who Care
+                  Created by Women<br> Who Care
                 </h2>
                 <div class="typeset2">
                   Founded by Emma Heming Willis and Helen Christoni, Make Time Wellness is a testament to their dedication to women's
@@ -1251,6 +1290,7 @@
         </div>
       </div>
     </section>
+
     <!-- Image with Text 3 -->
     <section id="image-with-text-3">
       <style>
@@ -1308,7 +1348,7 @@
       <style>
         #image-with-faqs {
           --section-padding-top: 3rem;
-          --section-padding-bottom: 3rem;
+          --section-padding-bottom: 0rem;
         }
         #image-with-faqs .accordion__title {
           font-family: var(--font-heading-family);
@@ -1320,7 +1360,7 @@
           border-width: 0.2rem;
         }
         #image-with-faqs .accordion summary {
-          padding: 1.7rem 1.5rem;
+          padding: 1.7rem 3rem 1.7rem 1.5rem;
         }
         @media screen and (min-width: 750px) {
           #image-with-faqs {
@@ -1340,10 +1380,13 @@
           .image-with-faqs--cover {
             max-width: 78rem;
           }
+          #image-with-faqs .accordion summary {
+            padding: 2rem 1.5rem  2rem 0.5rem;
+          }
         }
       </style>
       <div class="section-padding gradient color-scheme-1" style="--color-badge-border: 63, 54, 49;">
-        <div class="page-width">
+        <div class="page-width page-width--fullwidth">
           <div class="image-with-faqs">
             <div class="image-with-faqs--cover">
               <div class="title-wrapper center" style="--color-foreground: 30, 63, 64;">
@@ -1421,6 +1464,11 @@
                   </div>
                 </details>
               </accordion-tab>
+              <div class="media-wrapper medium-hide large-up-hide" style="--image-padding: 100%;">
+                <div class="media media--custom">
+                  <img src="./src/img/faqs-make-time-wellness-mobile-2x.png" alt="" loading="lazy">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1438,9 +1486,15 @@
           max-width: 77.7rem;
           margin: 0 auto;
         }
+        #newsletter .title-wrapper br {
+          display: none;
+        }
         #newsletter form .media-wrapper {
           margin-top: 1rem;
           mix-blend-mode: multiply;
+        }
+        #newsletter .title-wrapper .h0 {
+          font-size: 2.8rem;
         }
         @media screen and (min-width: 750px) {
           #newsletter {
@@ -1450,6 +1504,9 @@
           }
           #newsletter .newsletter {
             position: relative;
+          }
+          #newsletter .title-wrapper br {
+            display: inline-block;
           }
           #newsletter .newsletter-content {
             position: absolute;
@@ -1493,7 +1550,7 @@
           <div class="newsletter-content">
             <div class="page-width">
               <div class="title-wrapper center">
-                <h2 class="h0">Sign up for our newsletter and get 15% off your first order</h2>
+                <h2 class="h0">Sign up for our newsletter <br>and get 15% off your first order</h2>
               </div>
               <form action="" method="post" id="newsletter">
                 <div class="newsletter-input">
@@ -1517,6 +1574,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer  -->
@@ -1536,9 +1594,7 @@
               <div class="media media--custom">
                 <img src="./src/img/make-time-nude-logo-2x.png" width="120" alt="" loading="lazy"></div>
             </div>
-            <div>
-              2024 Make Time. All Rights Reserved.
-            </div>
+            <div class="content">2024 Make Time. All Rights Reserved.</div>
             <ul class="list-unstyled social-links__list">
               <li>
                 <a href="#">

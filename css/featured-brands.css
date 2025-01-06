@@ -56,7 +56,9 @@
 }
 
 @media screen and (min-width: 750px) {
-  /*  */
+  .featured-brands .featured-brand--details {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 980px) {

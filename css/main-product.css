@@ -42,6 +42,30 @@
   .main-carousel-thumbnails-list {
     justify-content: center;
   }
+
+  #main-carousel-thumbnails .splide__slide {
+    position: relative;
+    border: none;
+  }
+
+  #main-carousel-thumbnails .splide__list {
+    padding-bottom: 1.2rem !important;
+  }
+
+  #main-carousel-thumbnails .splide__slide::after {
+    content: "";
+    position: absolute;
+    bottom: -0.8rem;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+    width: 0;
+    background: linear-gradient(90deg, #A34D9F 0%, #275FD0 100%);
+    transition: all 0.3s ease;
+  }
+
+  #main-carousel-thumbnails .splide__slide.is-active::after {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -128,7 +152,7 @@
 }
 
 .main-product-gallery+.main-product-gallery {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .thumbnail-list {
@@ -149,6 +173,10 @@
 }
 
 @media screen and (min-width: 750px) {
+  .main-product-gallery+.main-product-gallery {
+    margin-bottom: 5rem;
+  }
+
   .review-box {
     gap: 2.9rem;
   }
@@ -268,6 +296,15 @@
   line-height: 1.5;
 }
 
+@media screen and (max-width: 749px) {
+  .subscription-input-box .subscription-price {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 0;
+    line-height: 1.4;
+  }
+}
+
 /* Buy Button */
 
 .product-form__buttons {
@@ -355,6 +392,10 @@ input[type="number"].quantity__input {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.accepted-payment-cards svg {
+  width: 2.2rem;
 }
 
 .accepted-payment-cards li {
@@ -454,6 +495,9 @@ details[open].accordion .content {
 }
 
 @media screen and (min-width: 750px) {
+  .accepted-payment-cards svg {
+    width: 3rem;
+  }
   .accordion summary .icon {
     position: relative;
     margin-top: -1rem;
