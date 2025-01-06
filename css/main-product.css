@@ -309,6 +309,7 @@ input[type="number"].quantity__input::-webkit-inner-spin-button {
 }
 
 input[type="number"].quantity__input {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
@@ -356,14 +357,19 @@ input[type="number"].quantity__input {
 
 /* accordion */
 
-details.accordion {
+/* details.accordion {
   border-top: 1px solid rgb(var(--color-badge-border));
   border-bottom: 1px solid rgb(var(--color-badge-border));
   margin-bottom: 0;
 }
 
+details.accordion[open] {
+  padding-bottom: 1rem;
+}
+
 details.accordion + details.accordion {
   margin-top: 0;
+  border-top: 0;
 }
 
 details.accordion + details.accordion:last-child {
@@ -411,6 +417,102 @@ details[open].accordion summary svg {
 details[open].accordion .content {
   padding: 1.5rem;
   max-height: 18rem;
+} */
+
+.accordion {
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  border-top: .1rem solid rgb(var(--color-badge-border));
+  border-bottom: .1rem solid rgb(var(--color-badge-border));
+}
+
+.accordion:first-of-type {
+  margin-bottom: 0;
+}
+
+.accordion + .accordion {
+  margin-top: 0;
+  border-top: none;
+}
+
+.accordion summary {
+  line-height: 1;
+  padding: 1.5rem;
+}
+
+.accordion .accordion__content {
+  padding-inline-start: 1.2rem;
+  padding-inline-end: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  .accordion summary .icon {
+    position: relative;
+    margin-top: -1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.accordion summary .icon {
+  position: absolute;
+  top: 50%;
+  display: block;
+  right: 1.2rem;
+  margin-top: -.7rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  transition: transform var(--duration-default) ease;
+}
+
+.icon-plus-alt::before,
+.icon-plus-alt::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: currentColor;
+  transition: all 0.3s ease;
+}
+
+.icon-plus-alt::before {
+  width: 100%;
+  height: .1rem;
+}
+
+.icon-plus-alt::after {
+  width: 0.1rem;
+  height: 100%;
+}
+
+.accordion details[open] .icon-plus-alt::before,
+.accordion details[open] .icon-plus-alt::after {
+  width: 100%;
+  height: 0.1rem;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.product__accordion .accordion__content {
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
+  padding-bottom: 1.5rem;
+  word-break: break-word;
+  font-size: 1.6rem;
+  line-height: calc(1 + .5 / var(--font-body-scale));
+  max-height: 25rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 /* Check List */

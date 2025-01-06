@@ -318,22 +318,6 @@ h5,
   word-break: break-word;
 }
 
-.hxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
-  line-height: 1.1;
-}
-
-.hxl {
-  font-size: calc(var(--font-heading-scale) * 5rem);
-  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
-}
-
-@media only screen and (min-width: 750px) {
-  .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
-  }
-}
-
 .h0 {
   font-size: calc(var(--font-heading-scale) * 2.5rem);
 }
@@ -415,6 +399,25 @@ h6,
   margin-block-end: 1.67em;
 }
 
+.hxxl {
+  font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
+  line-height: 1.1;
+}
+
+.hxl,
+.hxl {
+  font-size: calc(var(--font-heading-scale) * 2rem);
+  line-height: calc(1 + 0.5 / max(1, var(--font-heading-scale)));
+}
+
+@media only screen and (min-width: 750px) {
+
+  .hxl,
+  .hxl {
+    font-size: calc(var(--font-heading-scale) * 3.5rem);
+  }
+}
+
 blockquote {
   font-style: italic;
   color: rgba(var(--color-foreground), 0.75);
@@ -492,6 +495,14 @@ blockquote {
 .typeset2 .link,
 .typeset3 .link {
   font-size: inherit;
+}
+
+.font-body {
+  font-family: var(--font-body-family);
+}
+
+.font-heading {
+  font-family: var(--font-heading-family);
 }
 
 .caption-with-letter-spacing {
@@ -617,6 +628,42 @@ table:not([class]) th {
 
 .weight-900 {
   font-weight: 900;
+}
+
+.line-005 {
+  line-height: 0.5;
+}
+
+.line-075 {
+  line-height: 0.75;
+}
+
+.line-100 {
+  line-height: 1;
+}
+
+.line-110 {
+  line-height: 1.1;
+}
+
+.line-120 {
+  line-height: 1.20;
+}
+
+.line-125 {
+  line-height: 1.25;
+}
+
+.line-130 {
+  line-height: 1.3;
+}
+
+.line-140 {
+  line-height: 1.4;
+}
+
+.line-150 {
+  line-height: 1.5;
 }
 
 .light {
@@ -1546,6 +1593,7 @@ deferred-media {
 .rating-star::before {
   content: "\2605\2605\2605\2605\2605";
   background: linear-gradient(90deg, rgb(var(--color-rating)) var(--percent), rgba(var(--color-foreground), .15) var(--percent));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
