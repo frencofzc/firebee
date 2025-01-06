@@ -1,0 +1,122 @@
+.footer-site__information .media-wrapper {
+  max-width: 12rem;
+  width: 100%;
+}
+
+.social-links__list {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-links__list a {
+  color: rgb(var(--color-foreground));
+  border: 0.1rem solid rgb(var(--color-foreground));
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-menu__block h3, .footer-menu__block .h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.footer-menu__block .footer-menu {
+  margin-top: 1rem;
+} 
+
+.footer-menu__block {
+  margin-top: 2rem;
+}
+
+.footer-menu__block .footer-menu a {
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.footer-bottom .page-width{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-bottom {
+  border-top: 0.1rem solid rgba(var(--color-foreground), .25);
+  margin-top: 3rem;
+}
+
+.footer-bottom .disclaimer-text h3 {
+  font-size: 1.4rem;
+}
+
+.footer-bottom .disclaimer-text p {
+  font-size: 1.3rem;
+}
+
+.footer-bottom .disclaimer-text {
+  max-width: 37rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 749px) {
+  .footer .footer-site__information {
+    margin-top: 2rem;
+    position: relative;
+    order: 1;
+  }
+  .footer .footer-site__information .social-links__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .footer .grid__item:not(.footer-site__information) {
+    max-width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .footer-menu__block {
+    margin-top: 0;
+  }
+
+  .footer-menu__block h3,
+  .footer-menu__block .h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+
+  .social-links__list {
+    margin-top: 2rem;
+  }
+
+  .footer-bottom .disclaimer-text {
+    text-align: start;
+  }
+
+  .footer-bottom .page-width {
+    padding-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .footer-bottom .accepted-payment-cards {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .footer .footer-site__information {
+    max-width: calc(40% - var(--grid-desktop-horizontal-spacing) * 4 / 5);
+  }
+}
