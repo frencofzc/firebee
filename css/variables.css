@@ -190,7 +190,7 @@ body,
 .color-scheme-2,
 .color-scheme-3,
 .color-scheme-4 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   background-color: rgb(var(--color-background));
 }
 

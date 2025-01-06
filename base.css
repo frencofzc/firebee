@@ -18,6 +18,10 @@ html {
   padding: 0 1.5rem;
 }
 
+.page-width--fullwidth {
+  max-width: 100%;
+}
+
 .page-width-desktop {
   padding: 0;
   margin: 0 auto;
@@ -42,6 +46,11 @@ html {
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
+  }
+
+  .page-width--fullwidth {
+    padding-inline-start: 3rem;
+    padding-inline-end: 3rem;
   }
 
   .header.page-width,
@@ -181,7 +190,7 @@ html {
 
 .main-header {
   display: grid;
-  grid-template-areas: "heading navigation icons";
+  grid-template-areas: "menu-icon heading icons";
   grid-template-columns: auto 1fr auto;
 }
 
@@ -190,6 +199,10 @@ html {
   padding: .75rem;
   text-decoration: none;
   word-break: break-word;
+}
+
+.main-header header-drawer {
+  grid-area: menu-icon;
 }
 
 .linked-logo {
@@ -207,7 +220,7 @@ html {
 
 header-drawer {
   justify-self: start;
-  margin-left: -1.2rem;
+  /* margin-left: -1.2rem; */
 }
 
 .navigation__links {
@@ -240,6 +253,20 @@ header-drawer {
   cursor: pointer;
 }
 
+.header__icon.header__icon--cart {
+  position: relative;
+}
+.header__icon.header__icon--cart > .cart-indication {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: block;
+  border-radius: 50%;
+  background-color: rgb(var(--color-button));
+}
+
 .header__icon .icon {
   width: 2.4rem;
   height: 2.4rem;
@@ -247,7 +274,19 @@ header-drawer {
   vertical-align: middle;
 }
 
+@media screen and (max-width: 749px) {
+  .main-header {
+    align-items: center;
+  }
+  .main-header .logo__heading {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 750px) {
+  .main-header {
+    grid-template-areas: "heading navigation icons";
+  }
   .navigation__links {
     display: block;
   }
@@ -1580,7 +1619,7 @@ deferred-media {
 /* Rating */
 .rating-star {
   --letter-spacing: .3;
-  --font-size: 1.6;
+  --font-size: 2.2;
   --percent: calc((var(--rating) / var(--rating-max) + var(--rating-decimal)* var(--font-size) /(var(--rating-max)*(var(--letter-spacing) + var(--font-size))))* 100%);
   letter-spacing: calc(var(--letter-spacing)* 1rem);
   font-size: calc(var(--font-size)* 1rem);
