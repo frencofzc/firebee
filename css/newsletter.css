@@ -1,0 +1,38 @@
+.newsletter-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 74rem;
+  width: 100%;
+  margin: 3rem auto;
+  gap: 1.5rem;
+}
+
+.newsletter-email__input {
+  padding: 1.5rem;
+  border: 0.1rem solid rgb(var(--color-button));
+  border-radius: 40px;
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-grow: 1;
+  color: rgba(var(--color-foreground), .8);
+  background: transparent;
+}
+
+@media screen and (max-width: 749px) {
+  .newsletter-input > * {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter-input {
+    gap: 3rem;
+    flex-direction: row;
+  }
+  .newsletter-email__input {
+    font-size: 1.8rem;
+    padding: 1.8rem 1.5rem;
+  }
+}
